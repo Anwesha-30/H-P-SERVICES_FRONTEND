@@ -1,0 +1,218 @@
+/* ======================================================
+   PARTNER SECTION — Figma Accurate Styling
+   ====================================================== */
+
+.partner-section {
+  width: 100%;
+  background: #E4EEF0;   /* Figma background */
+  padding: 110px 5%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* ------------------------------------------------------
+   TWO VERTICAL LINES (LEFT + RIGHT)
+   ------------------------------------------------------ */
+
+.partner-line {
+  position: absolute;
+  width: 8px;
+  background: #075056; 
+  border-radius: 6px;
+  opacity: 1;
+  z-index: 2;
+}
+
+/* LEFT SIDE */
+.partner-line.left-long {
+  height: 54%;
+  top: 21%;
+  left: 4%;
+}
+
+.partner-line.left-short {
+  height: 34%;
+  top: 33%;
+  left: calc(4% + 16px);
+}
+
+/* RIGHT SIDE */
+.partner-line.right-long {
+  height: 54%;
+  top: 21%;
+  right: 4%;
+}
+
+.partner-line.right-short {
+  height: 34%;
+  top: 33%;
+  right: calc(4% + 16px);
+}
+
+/* ------------------------------------------------------
+   BUBBLES (Exactly like Figma)
+   ------------------------------------------------------ */
+
+.partner-bubble {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.50;
+  z-index: 1;
+  background: #075056;
+}
+
+.partner-bubble.bubble-left {
+  width: 95px;
+  height: 95px;
+  top: 65px;
+  left: 9%;
+}
+
+.partner-bubble.bubble-right-lg {
+  width: 185px;
+  height: 185px;
+  top: 40px;
+  right: 7%;
+}
+
+.partner-bubble.bubble-right-sm {
+  width: 70px;
+  height: 70px;
+  top: 155px;
+  right: 15%;
+}
+
+/* ------------------------------------------------------
+   HEADING — Figma Accurate
+   ------------------------------------------------------ */
+
+.partner-title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 10;   /* Make sure heading is above bubbles */
+}
+
+/* Big P (slightly bigger) */
+.partner-title-big-p {
+  font-size: 110px;
+  font-weight: 800;
+  color: #075056;  
+  line-height: 0.8;
+  margin-right: 5px;
+}
+
+/* Remaining text (pure black) */
+.partner-title-rest {
+  font-size: 50px;
+  font-weight: 800;
+  color: #000000; 
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+/* ------------------------------------------------------
+   CARD CONTAINER
+   ------------------------------------------------------ */
+
+.partner-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  z-index: 5;
+  position: relative;
+}
+
+/* ------------------------------------------------------
+   CARD — NO OUTER BORDER, PURE FIGMA STYLE
+   ------------------------------------------------------ */
+
+.partner-card {
+  width: 330px;
+  background: transparent;  /* remove teal border */
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); /* Figma shadow */
+  cursor: pointer;
+  transition: 0.35s ease;
+  overflow: hidden; /* ensures perfect clipping */
+}
+
+/* Hover */
+.partner-card:hover {
+  transform: translateY(-12px) scale(1.04);
+}
+
+/* PHOTO */
+.partner-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* NAME BAR — ALWAYS VISIBLE */
+.partner-card-name {
+  width: 100%;
+  background: #004D4F;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 14px 0;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+}
+
+/* ------------------------------------------------------
+   RESPONSIVE BEHAVIOR
+   ------------------------------------------------------ */
+
+@media (max-width: 900px) {
+
+  .partner-line,
+  .partner-bubble {
+    display: none;
+  }
+
+  .partner-title-big-p {
+    font-size: 80px;
+  }
+
+  .partner-title-rest {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .partner-card {
+    width: 85%;
+  }
+
+  .partner-title-big-p {
+    font-size: 65px;
+  }
+
+  .partner-title-rest {
+    font-size: 28px;
+  }
+}
+@keyframes partnerGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(7, 80, 86, 0.0);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(7, 80, 86, 0.35);
+    transform: scale(1.015);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(7, 80, 86, 0.0);
+    transform: scale(1);
+  }
+}

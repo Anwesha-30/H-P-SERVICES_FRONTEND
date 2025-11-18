@@ -1,0 +1,129 @@
+/* FULL NAVBAR */
+.hp-navbar {
+  width: 1280px;
+  height: 76px;
+  background: #16232AD9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 57px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+/* LEFT GROUP */
+.hp-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* HAM ICON EXACT LIKE FIGMA (26 × 26 px) */
+.hp-ham {
+  width: 26.34px;
+  height: 26.34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hp-ham div {
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+/* LOGO 26 × 26 px */
+.hp-logo {
+  width: 26.34px;
+  height: 26.34px;
+  object-fit: contain;
+}
+
+/* H&P PROJECTS TEXT EXACT SIZE (344.44 × 32 px) */
+.hp-title {
+  width: 344.44px;
+  height: 32px;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+/* RIGHT LINKS EXACT WIDTH 180.22 × 21.17 px */
+.hp-right {
+  width: 180.22px;
+  height: 21.17px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hp-right a {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+/* SIDE PANEL (FIGMA VARIANT2 EXACT) */
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: -293px;  /* panel width */
+  width: 293px;
+  height: 100vh;
+  background: #062A2E;
+  padding: 40px 30px;
+  transition: 0.45s ease;
+  z-index: 10000;
+}
+
+.side-panel.open {
+  left: 0;
+}
+
+/* ARROW CLOSE BUTTON */
+.side-close {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* SIDE MENU LINKS */
+.side-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-links li {
+  margin-bottom: 22px;
+  padding-bottom: 8px;
+  border-bottom: 1px dotted white;
+}
+
+.side-links a {
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+/* BACKDROP OVERLAY */
+.side-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.35);
+  top: 0;
+  left: 0;
+  z-index: 9990;
+}
